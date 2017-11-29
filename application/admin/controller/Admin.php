@@ -4,6 +4,49 @@ namespace app\admin\controller;
 
 class Admin extends Base
 {
+	
+	/**
+	 * 管理员列表
+	 */
+	public function index()
+	{
+		return $this->fetch();
+	}
+	/**
+	 * 管理员信息
+	 */
+	public function info()
+	{
+		return $this->fetch();
+	}
+	
+	/**
+	 * 增改删管理员
+	 */
+	public function handle()
+	{
+		$data = input('post.');
+		
+		if(empty($data['password'])){
+			unset($data['password']);
+		}else{
+			$data['password'] = encrypt($data['password']);//TODO:此处要增加 encrypt 加密函数
+		}
+		
+		if($data['act']=='add'){
+			
+		}
+		
+		if($data['act']=='edit'){
+			
+		}
+		
+		if($data['del']=='del' && $data['admin_id']>1){//不能删除超级管理员
+			
+		}
+	}
+	
+	//管理员登录
     public function login()
     {
     	//判断是否登录，如果已经登录转到后台首页
@@ -28,6 +71,14 @@ class Admin extends Base
     	}
         return $this->fetch();
     }
+	
+	/**
+	 * 退出登录
+	 */
+	public function logout()
+	{
+		
+	}
 	
 
 	public function safe_code(){
