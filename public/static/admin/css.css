@@ -1,0 +1,14 @@
+.bg{background: #DFDFDF;}
+.login-main{width: 500px; margin: 100px auto; border: 1px solid #dfdfdf; padding: 50px; background: #fff;}
+.login-btn{width: 100%;}
+.layui-elem-field legend{margin: 0 auto;}
+.verify-box input {
+    display: inline-block;
+    width: 60%;
+}
+.verify-box img {
+    display: inline-block;
+    margin-left: 2%;
+    width: 38%;
+    height: 38px;
+}
